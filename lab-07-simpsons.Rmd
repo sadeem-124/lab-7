@@ -1,6 +1,6 @@
 ---
 title: "lab-07-simpsons.Rmd"
-author: "Musab Isah"
+author: "sadeem ghareeb alanezi  ID/2201001438"
 date: "3 March 2021"
 output: pdf_document
 ---
@@ -22,43 +22,49 @@ library(mosaicData)
 
 1.  
 ```{r whickam}
-
+?Whickham
 ```
     
-Your answer:
+Your answer:observational , Because they notice a person's health status after a period of time
 
 2.  
 ```{r observations}
-
+nrow(Whickham)
 ```
 
-Your answer;
+Your answer; obs 1314  
+Each row represents whether the person is alive or dead, is he a smoker or not, and how old he is
 
 3.  
 
 ```{r number_variables}
-
+names(Whickham)
 ```
 
-Your answer:  
+Your answer:  3 var , "outcome" "smoker"  "age"
 
 ```{r var_type}
-
+unique(Whickham$outcome)
+unique(Whickham$smoker)
+unique(Whickham$age)
 ```
 
 Your answer: 
 
 ```{r plot_outcome}
-
+ggplot(Whickham, aes(x = outcome)) +
+  geom_bar()
 ```
 
 
 ```{r plot_smoker}
-
+ggplot(Whickham, aes(x = smoker)) +
+  geom_bar()
 ```
 
 ```{r plot_age}
-
+ggplot(Whickham, aes(x = age)) +
+  geom_bar()
 ```
 
 
